@@ -52,6 +52,10 @@ const SERVER_URL = (process.env.SERVER_URL) ?
   config.get('serverURL');
 
 if (!(APP_SECRET && VALIDATION_TOKEN && PAGE_ACCESS_TOKEN && SERVER_URL)) {
+  console.error("validationToken: ", VALIDATION_TOKEN);
+  console.error("appSecret: ", APP_SECRET);
+  console.error("pageAccessToken: ", PAGE_ACCESS_TOKEN);
+  console.error("serverURL: ", SERVER_URL);
   console.error("Missing config values");
   process.exit(1);
 }
