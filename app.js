@@ -827,6 +827,7 @@ function callSendAPI(messageData) {
         recipientId);
       }
     } else {
+      console.error("Resonse: ", response);
       console.error(response.error);
     }
   });  
